@@ -1,0 +1,177 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #2d3436;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+
+    /* Add the Matrix-style binary code background image */
+    background-image: url("sl_031420_28950_10.jpg");
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+/* Header styles */
+h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Language selector styles */
+select {
+    width: 200px;
+    padding: 12px 15px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    color: #2d3436;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+select:hover {
+    border-color: #74b9ff;
+}
+
+select:focus {
+    outline: none;
+    border-color: #0984e3;
+    box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.1);
+}
+
+/* Textarea styles */
+textarea {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    border: 2px solid #dfe6e9;
+    border-radius: 12px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    resize: vertical;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #0984e3;
+    box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.1);
+}
+
+/* Button styles */
+button {
+    display: block;
+    width: 200px;
+    padding: 14px 28px;
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: #0062cc;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(9, 132, 227, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Result container styles */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#result.visible {
+    opacity: 1;
+}
+
+/* Success and error states */
+.success {
+    background-color: #e3fcef;
+    color: #00b894;
+    border: 2px solid #55efc4;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.error {
+    background-color: #ffe3e3;
+    color: #d63031;
+    border: 2px solid #ff7675;
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Container for better organization */
+.syntax-checker-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    select, button {
+        width: 100%;
+    }
+    textarea {
+        height: 250px;
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
